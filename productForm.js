@@ -56,6 +56,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Get the variantId, price, and category from the selected option
             variantId = selectedOption.value;
+
+            // Update the variantId in url
+            window.history.pushState(null, null, `?variant=${variantId}`);
+
             productPrice = parseInt(selectedOption.getAttribute('data-product-price')) * 100;
             category = selectedOption.getAttribute('data-product-category');
 
