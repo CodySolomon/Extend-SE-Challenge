@@ -3,23 +3,28 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial variables
     const productForm = document.querySelector('.product-form');
     const productName = document.querySelector('.product-title');
+    const productPriceElement = document.querySelector('.product-price');
     const image = document.querySelector('.product-image');
-    const extendOffer = document.querySelector('.extend-offer');
     const variantSelect = document.getElementById('variant');
     let variantId;
+    let productPrice;
+    let category;
 
     // Get default selected products variantId value
     if(variantSelect.options && variantSelect.options[variantSelect.selectedIndex]){
         defaultProduct = variantSelect.options[variantSelect.selectedIndex];
-        if(defaultProduct && defaultProduct.value) {
+        if(defaultProduct && defaultProduct.value && defaultProduct.getAttribute('data-product-price') && defaultProduct.getAttribute('data-product-category') && defaultProduct.getAttribute('data-product-name')){
             defaultProduct.setAttribute('selected', '')
             productName.innerText = defaultProduct.getAttribute('data-product-name');
+            productPriceElement.innerText = `$${defaultProduct.getAttribute('data-product-price')}`;
 
             // Set the variantId to the default selected product
             variantId = defaultProduct.value;
+            productPrice = parseInt(defaultProduct.getAttribute('data-product-price')) * 100;
+            category = defaultProduct.getAttribute('data-product-category');
 
             // Failsafe - If there is no variantId, return
-            if(!variantId) return;
+            if(!variantId || !productPrice || !category) return;
             
         }
     }
@@ -40,13 +45,22 @@ document.addEventListener('DOMContentLoaded', function() {
             selectedOption.setAttribute('selected', '');
             
             // Update the displayed product image and name
-            if (selectedOption.getAttribute('data-image') && productName) {
+            if (selectedOption.getAttribute('data-image') && productName && productPriceElement) {
                 image.src = selectedOption.getAttribute('data-image');
                 productName.textContent = selectedOption.getAttribute('data-product-name');
+                productPriceElement.textContent = `$${selectedOption.getAttribute('data-product-price')}`;
             }
 
-            // Get the variantId of the current selected option
+            // Failsafe - If there is no price or category or variantId, return
+            if(!selectedOption.getAttribute('data-product-price') || !selectedOption.getAttribute('data-product-category') || !selectedOption.value) return;
+
+            // Get the variantId, price, and category from the selected option
             variantId = selectedOption.value;
+            productPrice = parseInt(selectedOption.getAttribute('data-product-price')) * 100;
+            category = selectedOption.getAttribute('data-product-category');
+
+            // Failsafe - If there is no variantId, return
+            if(!variantId || !productPrice || !category) return;
 
         }
     });
