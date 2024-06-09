@@ -2,7 +2,7 @@
 Extend take home challenge for Solution &amp; Support Engineers
 
 ## Extend SDK documentation
-- [Extend SDK Documentation](https://helloextend.github.io/extend-sdk-client/)
+- <a href="https://helloextend.github.io/extend-sdk-client/" target="_blank">Extend SDK Documentation</a>
   
 # Instructions
 You will be working in only index.html and productForm.js
