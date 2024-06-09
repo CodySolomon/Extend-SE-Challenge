@@ -5,7 +5,7 @@ Extend take home challenge for Solution &amp; Support Engineers
 - <a href="https://helloextend.github.io/extend-sdk-client/" target="_blank">Extend SDK Documentation</a>
   
 # Instructions
-**You will be working in only index.html and productForm.js**
+### **You will be working in only index.html and productForm.js**
 
 - Pull main and create a branch with the following naming convention:
   ```Initials/challenge``` **Example:** cs/challenge
@@ -20,7 +20,7 @@ Extend take home challenge for Solution &amp; Support Engineers
 
 Once you have confirmed Extend offers render on initial page load and the offers update when changing product variants on the page, click an Extend offer and then click the add to cart button. You should see a window alert 'success' message show up
 
-Don't forget to commit and push your changes!
+### **Don't forget to commit and push your branch once complete!**
 
 # Optional stretch goal:
 - Add a checkbox above the add to cart button with the text of 'Add Protection?'
