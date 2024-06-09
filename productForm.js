@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Failsafe - If there is no variantId, return
             if(!variantId || !productPrice || !category) return;
-            
+
         }
     }
 
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Failsafe - If there is no variantId, return
             if(!variantId || !productPrice || !category) return;
-
+            
         }
     });
 });

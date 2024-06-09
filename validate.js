@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const productForm = document.querySelector('.product-form');
     const addToCartButton = document.querySelector('.add-to-cart-button');
-    const extendOffer = document.querySelector('.extend-offer');
+    const extendOffer = document.querySelector('.extend-offer') ? document.querySelector('.extend-offer') : document.querySelector('#extend-offer');
     const ExtendSDK = window.Extend;
 
     if(!addToCartButton || !productForm || !extendOffer || !ExtendSDK) return;
