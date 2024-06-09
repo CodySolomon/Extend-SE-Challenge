@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extend Product Display Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="productForm.js" defer></script>
+    <script src="validate.js" defer></script>
+</head>
+<body>
+    <div class='product-display'>
+        <div class="logo-container">
+            <img class="logo" src="https://cdn.prod.website-files.com/64b98ef5e3c7f7935d50009c/64c2bec3cbb995f9e7f50d59_Extend%E2%84%A2_logo_white_blue.svg" alt="Logo">
+        </div>
+        
+        <section class="product-info">
+            <div class="product-container">
+                <div class="product-image-container">
+                    <img class="product-image" src="./assets/black-macbook-pro.jpg" alt="Product Image">
+                </div>
+                    <form id="46380294963477" class="product-form">
+                        <div class="product-details">
+                            <h1 class="product-title"></h1>
+                            <p class="product-description">This is a great product that you will love!</p>
+
+                            <label for="variant">Color:</label>
+                            <select id="variant" name="variant">
+                                <option value="46380294963477" data-image="./assets/black-macbook-pro.jpg" data-product-name="Black MacBook Pro" selected>Black</option>
+                                <option value="46380294930709" data-image="./assets/red-macbook-pro.jpg" data-product-name="Red MacBook Pro">Red</option>
+                                <option value="46380294996245" data-image="./assets/blue-macbook-pro.jpg" data-product-name="Blue MacBook Pro">Blue</option>
+                            </select>
+                        </div>
+
+                        <!-- Add to cart button -->
+                        <button class="add-to-cart-button">Add to Cart</button>
+                    </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
